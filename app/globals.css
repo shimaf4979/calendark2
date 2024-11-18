@@ -1,3 +1,4 @@
+/* calendar/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,8 +21,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* 近い予定のスタイル */
+.recent-event-item {
+  border: none; /* ボーダーを削除 */
+  border-radius: 0.75rem; /* 角の丸みを大きく */
+  padding: 1.5rem; /* パディングを増やす */
+  background: linear-gradient(
+    135deg,
+    #4f46e5 0%,
+    #3b82f6 100%
+  ); /* グラデーション背景 */
+  color: white; /* テキストの色を白に */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 大きなシャドウ */
+  transition: transform 0.2s; /* ホバー時のトランジション */
+}
+
+.recent-event-item:hover {
+  transform: translateY(-5px); /* ホバー時に上に移動 */
 }
